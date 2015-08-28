@@ -20,9 +20,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ULy-8C-Dqc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="8E5-aI-dvJ"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,11 +38,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="hatTable" destination="ULy-8C-Dqc" id="bcy-xK-U7t"/>
+                        <outlet property="hatTable" destination="ULy-8C-Dqc" id="muU-ND-0VR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="623" y="414"/>
         </scene>
         <!--New Hat-->
         <scene sceneID="LpD-jn-atx">
@@ -173,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7M-6t-fjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-235" y="450"/>
+            <point key="canvasLocation" x="-283" y="914"/>
         </scene>
     </scenes>
 </document>

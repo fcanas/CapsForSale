@@ -8,42 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController {
 
-    @IBOutlet var hatTable :UITableView?
+    var hatTable :UITableView = UITableView(frame: CGRectZero, style: .Plain)
     
-    var hats :[Hat] = [] {
-        didSet {
-            hatTable?.reloadData()
-        }
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hats.count
-    }
-    
-    let CellID = "HatCellID"
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellID) as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: CellID)
-        
-        cell.textLabel?.text = hats[indexPath.row].text
-        
-        return cell
-    }
+    let dataSource :HatDataSource = HatDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(hatTable)
+        
+        hatTable.frame = view.bounds
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newHat")
+        
+        hatTable.dataSource = dataSource
         navigationItem.title = "Hats"
+    }
+    
+    func newHat() {
+        presentViewController(UINavigationController(rootViewController: NewHatViewController()), animated: true, completion: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        Hat.query()?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
-            if let returnedHats = objects as? [Hat] {
-                self.hats = returnedHats
-                self.navigationItem.title = "\(returnedHats.count) Hats"
-            }
+        dataSource.fetchHats({ (success) -> Void in
+            self.hatTable.reloadData()
         })
     }
 
