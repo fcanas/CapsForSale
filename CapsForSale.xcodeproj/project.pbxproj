@@ -15,6 +15,7 @@
 		E797BCE61B90AF3900F96EC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E797BCE41B90AF3900F96EC0 /* LaunchScreen.xib */; };
 		E797BCF21B90AF3900F96EC0 /* CapsForSaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BCF11B90AF3900F96EC0 /* CapsForSaleTests.swift */; };
 		E797BD011B90B88B00F96EC0 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BD001B90B88B00F96EC0 /* Hat.swift */; };
+		E797BD031B90D99F00F96EC0 /* NewHatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E797BCFB1B90B29B00F96EC0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E797BCFC1B90B4E000F96EC0 /* CapsForSale-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CapsForSale-Bridging-Header.h"; sourceTree = "<group>"; };
 		E797BD001B90B88B00F96EC0 /* Hat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
+		E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				E797BCD91B90AF3900F96EC0 /* Supporting Files */,
 				E797BCFC1B90B4E000F96EC0 /* CapsForSale-Bridging-Header.h */,
 				E797BD001B90B88B00F96EC0 /* Hat.swift */,
+				E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */,
 			);
 			path = CapsForSale;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				E797BD011B90B88B00F96EC0 /* Hat.swift in Sources */,
 				E797BCDE1B90AF3900F96EC0 /* ViewController.swift in Sources */,
 				E797BCDC1B90AF3900F96EC0 /* AppDelegate.swift in Sources */,
+				E797BD031B90D99F00F96EC0 /* NewHatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

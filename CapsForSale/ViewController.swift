@@ -34,19 +34,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = "Hats"
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         Hat.query()?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             if let returnedHats = objects as? [Hat] {
                 self.hats = returnedHats
                 self.navigationItem.title = "\(returnedHats.count) Hats"
             }
         })
-    }
-    
-    @IBAction func newHat(sender :AnyObject) {
-        
     }
 
     override func didReceiveMemoryWarning() {
