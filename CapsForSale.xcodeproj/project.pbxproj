@@ -41,6 +41,7 @@
 		E797BCF01B90AF3900F96EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E797BCF11B90AF3900F96EC0 /* CapsForSaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsForSaleTests.swift; sourceTree = "<group>"; };
 		E797BCFB1B90B29B00F96EC0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E797BCFC1B90B4E000F96EC0 /* CapsForSale-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CapsForSale-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				E797BCE21B90AF3900F96EC0 /* Images.xcassets */,
 				E797BCE41B90AF3900F96EC0 /* LaunchScreen.xib */,
 				E797BCD91B90AF3900F96EC0 /* Supporting Files */,
+				E797BCFC1B90B4E000F96EC0 /* CapsForSale-Bridging-Header.h */,
 			);
 			path = CapsForSale;
 			sourceTree = "<group>";
@@ -318,6 +320,7 @@
 /* Begin XCBuildConfiguration section */
 		E797BCF31B90AF3900F96EC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E797BCFB1B90B29B00F96EC0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -402,9 +405,12 @@
 			baseConfigurationReference = C573D12751EE5113AB99B5D7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CapsForSale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CapsForSale/CapsForSale-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,9 +419,11 @@
 			baseConfigurationReference = 3D2E327788753809E7780F92 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CapsForSale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CapsForSale/CapsForSale-Bridging-Header.h";
 			};
 			name = Release;
 		};
