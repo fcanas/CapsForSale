@@ -8,11 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet var hatTable :UITableView?
+    
+    var hats :[Hat] = [] {
+        didSet {
+            hatTable?.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return hats.count
+    }
+    
+    let CellID = "HatCellID"
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellID) as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: CellID)
+        
+        cell.textLabel?.text = hats[indexPath.row].text
+        
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        navigationItem.title = "Hats"
+        
+        Hat.query()?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            if let returnedHats = objects as? [Hat] {
+                self.hats = returnedHats
+                self.navigationItem.title = "\(returnedHats.count) Hats"
+            }
+        })
+    }
+    
+    @IBAction func newHat(sender :AnyObject) {
+        
     }
 
     override func didReceiveMemoryWarning() {
