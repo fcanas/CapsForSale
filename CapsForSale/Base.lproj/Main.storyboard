@@ -62,13 +62,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2GH-lV-99q">
+                                <rect key="frame" x="16" y="143" width="568" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9i5-fX-9Oc"/>
+                                    <constraint firstAttribute="width" constant="100" id="alI-WS-iu8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="alI-WS-iu8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="alI-WS-iu8"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="hGI-bS-EpS" secondAttribute="centerX" id="3Ap-V5-VZV"/>
+                            <constraint firstItem="hGI-bS-EpS" firstAttribute="leading" secondItem="2GH-lV-99q" secondAttribute="trailing" constant="16" id="Dxq-1G-yau"/>
+                            <constraint firstItem="2GH-lV-99q" firstAttribute="leading" secondItem="Q5d-xi-Wiz" secondAttribute="leadingMargin" id="ECl-Y3-4yS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hGI-bS-EpS" secondAttribute="trailing" constant="-1" id="MEo-NA-fN7"/>
+                            <constraint firstItem="2GH-lV-99q" firstAttribute="top" secondItem="Hp3-M2-Qk3" secondAttribute="bottom" constant="16" id="b3q-Lf-DaV"/>
                             <constraint firstItem="hGI-bS-EpS" firstAttribute="leading" secondItem="Q5d-xi-Wiz" secondAttribute="leadingMargin" id="nA3-zU-a6S"/>
+                            <constraint firstItem="hGI-bS-EpS" firstAttribute="width" secondItem="2GH-lV-99q" secondAttribute="width" id="rVg-od-Qid"/>
                             <constraint firstItem="hGI-bS-EpS" firstAttribute="top" secondItem="Hp3-M2-Qk3" secondAttribute="bottom" constant="41" id="ri3-6x-Mxm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ECl-Y3-4yS"/>
+                                <exclude reference="b3q-Lf-DaV"/>
+                                <exclude reference="Dxq-1G-yau"/>
+                                <exclude reference="MEo-NA-fN7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="ECl-Y3-4yS"/>
+                                <include reference="b3q-Lf-DaV"/>
+                                <exclude reference="3Ap-V5-VZV"/>
+                                <include reference="Dxq-1G-yau"/>
+                                <include reference="MEo-NA-fN7"/>
+                                <exclude reference="nA3-zU-a6S"/>
+                                <exclude reference="rVg-od-Qid"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Hat" id="VQT-QF-7cs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nI5-E7-Ma9">

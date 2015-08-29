@@ -17,6 +17,7 @@
 		E797BD011B90B88B00F96EC0 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BD001B90B88B00F96EC0 /* Hat.swift */; };
 		E797BD031B90D99F00F96EC0 /* NewHatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */; };
 		E797BD051B90EFFC00F96EC0 /* HatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797BD041B90EFFC00F96EC0 /* HatDataSource.swift */; };
+		E797BD071B90F90500F96EC0 /* cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E797BD061B90F90500F96EC0 /* cell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E797BD001B90B88B00F96EC0 /* Hat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
 		E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHatViewController.swift; sourceTree = "<group>"; };
 		E797BD041B90EFFC00F96EC0 /* HatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HatDataSource.swift; sourceTree = "<group>"; };
+		E797BD061B90F90500F96EC0 /* cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				E797BD001B90B88B00F96EC0 /* Hat.swift */,
 				E797BD021B90D99F00F96EC0 /* NewHatViewController.swift */,
 				E797BD041B90EFFC00F96EC0 /* HatDataSource.swift */,
+				E797BD061B90F90500F96EC0 /* cell.xib */,
 			);
 			path = CapsForSale;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E797BCE11B90AF3900F96EC0 /* Main.storyboard in Resources */,
+				E797BD071B90F90500F96EC0 /* cell.xib in Resources */,
 				E797BCE61B90AF3900F96EC0 /* LaunchScreen.xib in Resources */,
 				E797BCE31B90AF3900F96EC0 /* Images.xcassets in Resources */,
 			);
